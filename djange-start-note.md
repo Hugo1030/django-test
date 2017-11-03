@@ -31,3 +31,16 @@
 * 打开命令行，进入想要安置项目的目录
 * 命令行输入：django-admin startproject myblog
 * 若没有报错，则创建项目成功
+
+### 项目目录结构
+* manage.py
+* myblog
+    * __init__.py
+    * settings.py
+    * urls.py
+    * wsgi.py
+
+#### manage.py
+* 与项目进行交互的命令行工具集的入口
+* 项目管理器
+* 执行 python manage.py 来查看所有命令
