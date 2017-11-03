@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""myblog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,11 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-
-    url(r'^$', views.showBlogList),
-    url(r'^blog/(\d+)$', views.showBlog),
 ]
