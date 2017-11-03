@@ -44,3 +44,33 @@
 * 与项目进行交互的命令行工具集的入口
 * 项目管理器
 * 执行 python manage.py 来查看所有命令
+
+#### myblog目录
+* 项目的一个容器
+* 包含项目最基本的一些配置
+* 目录名称不建议修改
+
+#### wsgi.py
+* WSGI (Python Web Server Gateway Interface)
+* 中文名：Python 服务器网关借口
+* Python 应用与 Web 服务器之间的接口
+
+#### urls.py
+* url 配置文件
+* Django 项目中所有地址（页面）都需要我们自己去配置其URL
+
+#### settings.py
+* 项目的总配置文件
+* 里面包含了数据库、Web 应用、时间等各种配置
+
+#### __init__.py
+* Python 中声明模块的文件
+* 内容默认为空
+
+---
+
+## 4-3 创建应用
+#### 创建步骤
+* 打开命令行，进入项目中 manage.py 同级目录
+* 命令行输入：python manage.py startapp blog
+* 添加应用名到 settings.py 中的 INSTALLED_APPS 里
