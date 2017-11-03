@@ -25,7 +25,7 @@ SECRET_KEY = '-$o_eg_joc&s23b2!xmq%m)x6awz1fe^dbngtl2gk_fer@@h1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases # 配置其他数据库
 
 DATABASES = {
     'default': {
