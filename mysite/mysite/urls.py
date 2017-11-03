@@ -19,5 +19,7 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'helloworld', views.hello)
+
+    url(r'^$', views.showBlogList),
+    url(r'^blog/(\d+)$', views.showBlog),
 ]
