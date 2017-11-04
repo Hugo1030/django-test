@@ -70,7 +70,45 @@
 ---
 
 ## 4-3 创建应用
-#### 创建步骤
+### 创建步骤
 * 打开命令行，进入项目中 manage.py 同级目录
 * 命令行输入：python manage.py startapp blog
 * 添加应用名到 settings.py 中的 INSTALLED_APPS 里
+
+### 目录结构
+* migrations
+  * __init__.py
+* __init__.py
+* admin.py
+* apps.py
+* models.py
+* tests.py
+* views.py
+
+#### migrations
+* 数据移植（迁移）模块
+* 全部自动生成
+
+#### admin.py
+* 该应用的后台管理系统配置
+
+#### app.py
+* 该应用的一些配置
+
+#### models.py
+* 数据模块
+* 使用 ORM 框架
+* 类似于 MVC 结构中的 Models（模型）
+
+#### test.py
+* 自动化测试模块
+* Django 提供了自动化测试功能
+* 在这里编写测试脚本（语句）
+
+#### views.py
+* 执行响应的代码所在模块
+* 代码逻辑处理的主要地点
+* 项目中大部分代码均在这里编写
+
+### 创建第一个页面（响应）
+* 编辑 blog.views 
