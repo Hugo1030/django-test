@@ -151,3 +151,47 @@
 * Django 查找 Template
   * Django 按照 INSTALLED_APPS 中添加顺序查找 Templates
   * 不同 APP 下 Templates 目录中的同名.html 文件会造成冲突  (重点问题)
+* 解决 Templates 冲突方案
+  * 在 APP 的 Templates 目录下创建以 APP 名为名称的目录
+  * 将 html 文件放入新创建的目录下
+  * 注意修改 views.py 文件中的 render 参数
+
+---
+## Models
+
+### Modesl 介绍
+* Django 中的 Models 是什么？
+  * 通常，一个 Models 对应数据库的一张数据表
+  * Django 中 Models 以类的形式表现
+  * 它包含了一些基本字段以及数据的一些行为
+* ORM
+  * 对象关系映射（Object Relation Mapping）
+  * 实现了对象和数据之间的映射
+  * 影藏了数据访问的细节，不需要编写 SQL 语句
+
+### 编写 Models
+* 步骤
+  * 在应用根目录下创建 models.py，并引入 models 模块
+  * 创建类，继承 models.Model，该类即是一张数据表
+  * 在类中创建字段
+* 字段创建
+  * 字段即类里面的属性（变量）
+  * attr = models.CharField(max_lenth=64)
+  * 查看官方网站文档，字段的可选参数
+
+### 生成数据表
+* 步骤
+  * 命令行进入 manage.py 同级目录
+  * 执行 python3 manage.py makemigrations app名（可选）
+  * 再执行 python3 manage.py
+* 查看
+  * Django 会自动在 app/migrations/ 目录下生成移植文件
+  * 执行 python3 manage.py sqlmigrate 应用名 文件id 查看 SQL 语句
+  * 默认 sqlite3 的数据库在项目根目录下 db.sqlite3
+* 查看并编辑 db.sqlite3
+  * 使用第三方软件
+  * SQlite Expert Personal
+  * 轻量级，完全免费
+
+### 页面呈现数据
+* 后台步骤
