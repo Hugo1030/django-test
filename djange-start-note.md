@@ -195,3 +195,9 @@
 
 ### 页面呈现数据
 * 后台步骤
+  * views.py 中 import models
+  * article = models.Article.objects.get(pk=1) # 这里的 pk 指的是「主键」
+  * render(request,page,{'article':article})
+* 前端步骤
+  * 模板可直接使用对象以及对象的"."操作
+  * {{ article.title }}
