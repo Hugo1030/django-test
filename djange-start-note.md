@@ -201,3 +201,16 @@
 * 前端步骤
   * 模板可直接使用对象以及对象的"."操作
   * {{ article.title }}
+
+---
+## Admin
+
+### Admin 简介
+* 什么是 Admin ?
+  * Admin 是 Django 自带的一个功能强大的自动化数据管理界面
+  * 被授权的用户可直接在 Admin 中管理数据库
+  * Django 提供了许多针对 Admin 的定制功能
+
+### 配置 Admin
+* 创建用户
+  * python3 manage.py createsuperuser 创建超级用户
