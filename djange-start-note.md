@@ -1,6 +1,6 @@
 # django 入门与实践
 
-## 1-1 课程介绍
+## 课程介绍
 
 ### 课程目标
 * 学习并掌握 Django 的基本用法
@@ -19,14 +19,14 @@
 
 ---
 
-## 2-1 课前准备
+## 课前准备
 
 ### Django 简介
 * Django 是一个基于 Python 的高级 Web 开发框架
 * 它能够让开发人员进行高效且快速的开发
 * 高度集成（不用自己造轮子），免费并且开源
 
-## 4-1 创建项目目录下部分文件的作用
+## 创建项目目录下部分文件的作用
 ### 创建步骤
 * 打开命令行，进入想要安置项目的目录
 * 命令行输入：django-admin startproject myblog
@@ -69,7 +69,7 @@
 
 ---
 
-## 4-3 创建应用
+## 创建应用
 ### 创建步骤
 * 打开命令行，进入项目中 manage.py 同级目录
 * 命令行输入：python manage.py startapp blog
@@ -124,4 +124,27 @@
 
 ## 第一个 Templates
 
-### 第二种 
+### 第二种 URL 配置
+* 包含其他 URL
+  * 在根 urls.py 中引入 include
+  * 在 APP 目录下创建 urls.py 文件，格式与根 urls.py 相同
+  * 根 urls.py 中 url 函数第二个参数改为 include('blog.urls')
+* 注意事项
+  * 根 urls.py 针对 APP 配置的 URL 名称，是该 APP 所有 URL 的总路径
+  * 配置 URL 时注意正则表达式结尾符号 $ 和 /
+
+### Templates 介绍
+* 什么是 Templates
+  * HTML 文件
+  * 使用了 Django 模板语言（Django Template Language, DTL）
+  * 可以使用第三方模板（如Jinja2）
+
+### 开发第一个 Template
+* 步骤
+  * 在 APP 的根目录下创建名叫 Templates 的目录
+  * 在该目录下创建 HTML 文件
+  * 在 views.py 中返回 render()
+* DTL 初步使用
+  * render() 函数中支持一个 dict 类型参数
+  * 该字典是后台传递到模板的参数，键为参数名
+  * 在模板中使用 {{ 参数名 }} 来直接使用
