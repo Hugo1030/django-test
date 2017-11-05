@@ -214,3 +214,9 @@
 ### 配置 Admin
 * 创建用户
   * python3 manage.py createsuperuser 创建超级用户
+  * localhost:8000/admin/ Admin 入口
+  * 修改 settings.py 中 LANGUAGE_CODE = 'zh_Hans'
+* 配置应用
+  * 在应用下 admin.py 中引入自身的 models 模块（或里面的模型类）
+  * 编辑 admin.py : admin.site.register(models.Article)
+  
