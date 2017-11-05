@@ -219,4 +219,13 @@
 * 配置应用
   * 在应用下 admin.py 中引入自身的 models 模块（或里面的模型类）
   * 编辑 admin.py : admin.site.register(models.Article)
-  
+* 修改数据
+  * 点击 Article 超链接进入 Article 列表页面
+  * 点击任意一条数据，进入编辑页面修改
+  * 编辑页面下方一排按钮可执行相应操作
+
+### 修改数据默认显示名称
+* 步骤
+  * 在 Article 类下添加一个方法
+  * 根据 Python 版本 .3 选择__str__(self) 或 .2 选择 __unicode__(self)
+  * return self.title
