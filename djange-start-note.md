@@ -148,3 +148,6 @@
   * render() 函数中支持一个 dict 类型参数
   * 该字典是后台传递到模板的参数，键为参数名
   * 在模板中使用 {{ 参数名 }} 来直接使用
+* Django 查找 Template
+  * Django 按照 INSTALLED_APPS 中添加顺序查找 Templates
+  * 不同 APP 下 Templates 目录中的同名.html 文件会造成冲突
