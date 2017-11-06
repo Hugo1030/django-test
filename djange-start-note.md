@@ -250,8 +250,35 @@
   * HTML 语句
   * {% endfor %}
 
-## 博客文章页面
+### 博客文章页面
 * 页面内容
   * 标题
   * 文章内容
   * 修改文章按钮（超链接）
+* URL 的参数传递
+  * 参数写在响应函数中 request 后，可以有默认值
+  * URL 正则表达式：r'^article/(?P<article_id>[0-9]+)/$
+  * URL 正则中的组名必须和参数名一致
+
+### Django 中的超链接
+* 超链接目标地址
+  * href 后面是目标地址
+  * template 中可以用 "{% url 'app_name:url_name' param %}"
+  * 其中 app_name 和 url_name 都在 url 中配置
+
+### 再配 URL
+* url 函数的名称参数
+  * 根 urls，卸载 include() 的第二个参数位置， namespace='blog'
+  * 应用下则写在 url() 的第三个参数位置，name='artcle'
+  * 主要取决于是否使用 include 引用了另一个 url 配置文件
+
+### 博客撰写页面
+* 页面内容
+  * 标题编辑栏
+  * 文章内容编辑区域
+  * 提交按钮
+* 编辑响应函数
+  * 使用 request.POST['参数名']获取表单数据
+  * models.Article.objects.create(title, content)创建对象
+
+---
