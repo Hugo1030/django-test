@@ -281,4 +281,13 @@
   * 使用 request.POST['参数名']获取表单数据
   * models.Article.objects.create(title, content)创建对象
 
+### 两个编辑页面
+* 思路
+  * 新文章为空，修改文章有内容
+  * 修改文章页面有文章对象
+  * 文章的 ID
+* 修改数据
+  * article.title = title
+  * article.save()
+
 ---
