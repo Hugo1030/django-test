@@ -293,3 +293,38 @@
 ---
 
 ## 补充内容
+
+### Templates 过滤器
+
+* 什么是过滤器？
+  * 卸载模板中，属于 Django 模板语言
+  * 可以修改模板中的变量，从而显示不同的内容
+* 怎么使用过滤器？
+  * {{ value | filter }}
+  * 例子: {{ list_nums | length }}
+  * 过滤器可叠加：{{ value | filter1 | filter2 | ...}}
+* 更多 Django 过滤器内容看官网
+
+### Django Shell
+* 什么是 Django Shell?
+  * 它是一个 Python 的交互式命令行程序
+  * 它自动引入了我们的项目环境
+  * 我们可以使用它与我们的项目进行交互
+* 如何使用 Django Shell?
+  * python manage.py shell
+  * from blog.models import Article
+  * Article.objects.all()
+* 有什么用？
+  * 我们可以使用 Django shell 来进行一些调试工作
+  * 测试未知的方法
+
+### Admin
+* 创建 admin 配置类
+  * class ArticleAdmin(admin.ModelAdmin)
+  * 注册：admin.site.register(Article, ArticleAdmin)
+* 显示其他字段
+  * list_display = ('title', 'content')
+  * list_display 同时支持 tuple 和 list
+* 过滤器
+  * list_filter = ('pub_time', )
+* 更多信息参考官方文档
