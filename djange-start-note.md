@@ -183,7 +183,7 @@
 * 步骤
   * 命令行进入 manage.py 同级目录
   * 执行 python3 manage.py makemigrations app名（可选）
-  * 再执行 python3 manage.py
+  * 再执行 python3 manage.py migrate
 * 查看
   * Django 会自动在 app/migrations/ 目录下生成移植文件
   * 执行 python3 manage.py sqlmigrate 应用名 文件id 查看 SQL 语句
